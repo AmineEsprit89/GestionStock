@@ -9,4 +9,11 @@ import java.util.List;
 public interface FactureRepository extends JpaRepository<Facture,Long> {
 
     List<Facture> findByFournisseurIdFournisseur(Long idFournisseur);
+
+
+    //jpql
+    //@Query("select f from Facture f where f.fournisseur.idFournisseur =?1")
+    // List <Factures> retrieveFactureByFournisseur(idFournisseur)
+
+
 }
